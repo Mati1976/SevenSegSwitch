@@ -1,0 +1,28 @@
+module digit_lut (
+    input value [4],  
+    output segs [8]  
+  ) {
+
+  always {
+    case (value)  {
+    0: segs = 8b00111111;
+      1: segs = 8b00000110;
+      2: segs = 8b01011011;
+      3: segs = 8b01001111;
+      4: segs = 8b01100110;
+      5: segs = 8b01101101;
+      6: segs = 8b01111101;
+      7: segs = 8b00000111;
+      8: segs = 8b01111111;
+      9: segs = 8b01100111;
+      10: segs = 8b01110111;
+      11: segs = 8b01111100;
+      12: segs = 8b00111001;
+      13: segs = 8b01011110;
+      14: segs = 8b01111001;
+      15: segs = 8b01110001;
+      default: segs = 8b00000000;
+    }
+    
+  }
+}
